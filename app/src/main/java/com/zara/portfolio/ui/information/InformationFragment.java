@@ -1,4 +1,4 @@
-package com.zara.portfolio.ui.mon;
+package com.zara.portfolio.ui.information;
 
 import android.os.Bundle;
 
@@ -17,9 +17,9 @@ import com.zara.portfolio.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MondayFragment extends Fragment {
+public class InformationFragment extends Fragment {
 
-    public MondayFragment() {
+    public InformationFragment() {
         // Required empty public constructor
     }
 
@@ -28,19 +28,11 @@ public class MondayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_monday, container, false);
+        return inflater.inflate(R.layout.fragment_information, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //1. get image from xml
-        ImageView ivInsta = view.findViewById(R.id.iv_insta);
-        ivInsta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "click insta icon!", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

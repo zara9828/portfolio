@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
-import com.zara.portfolio.ui.mon.MondayFragment;
+import com.zara.portfolio.ui.information.InformationFragment;
 import com.zara.portfolio.ui.tue.TuesDayFragment;
 import com.zara.portfolio.ui.wed.WednesdayFragment;
 
@@ -48,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new MondayFragment();
+                    return new InformationFragment();
                 case 1:
                     return new TuesDayFragment();
                 case 2:
                     return new WednesdayFragment();
             }
-            return new MondayFragment();
+            return new InformationFragment();
         }
 
         @Override
@@ -67,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "a";
+                    return "Information";
                 case 1:
-                    return "b";
+                    return "experiences";
                 case 2:
-                    return "c";
+                    return "skills";
             }
             return "";
         }
